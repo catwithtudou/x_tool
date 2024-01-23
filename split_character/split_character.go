@@ -72,10 +72,6 @@ func calculateTwitterContentLen(content string) (int, bool) {
 
 func calculateTwitterRuneContentLen(runeContent []rune) (int, bool) {
 	tweetLen := len(runeContent) + (len(string(runeContent))-len(runeContent))/2
-	if (len(string(runeContent))-len(runeContent))%2 != 0 {
-		fmt.Println(111)
-	}
-
 	return tweetLen, tweetLen >= twitterMaxLength
 }
 
